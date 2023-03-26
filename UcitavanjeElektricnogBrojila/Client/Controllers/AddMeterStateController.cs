@@ -17,6 +17,7 @@ namespace Client.Controllers
         {
             return View();
         }
+
         [HttpPost]
         [Route("/AddMeterState/AddMeterStateMethod")]
         public async Task<IActionResult> AddMeterStateMethod(MeterState state)

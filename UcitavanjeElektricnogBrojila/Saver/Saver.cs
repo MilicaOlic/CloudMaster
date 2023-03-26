@@ -57,9 +57,10 @@ namespace Saver
 
             if (resultDevice) {
                 using (var tx = stateManager.CreateTransaction())
-                {
+                { 
                     result = await meterStateDictionary.TryAddAsync(tx, state.StateId, state);
                     await tx.CommitAsync();
+                    UpdateMeterDevice(new MeterDevice(state.MeterId, state.NewState));
                 }
                 if (result == false)
                 {
@@ -73,6 +74,18 @@ namespace Saver
             {
                 return false;
             }
+        }
+        public async Task UpdateMeterDevice(MeterDevice device) {
+            
+            var stateManager = this.StateManager;
+
+            meterDictionary = await stateManager.GetOrAddAsync<IReliableDictionary<int, MeterDevice>>("MeterActiveData");
+            using (var tx = stateManager.CreateTransaction())
+            {
+                await meterDictionary.SetAsync(tx, device.MeterId, device); //za update
+                await tx.CommitAsync();
+            }
+            MeterDeviceGetAllData();
         }
         public async Task<bool> MeterDeviceExistWithOldState(int deviceId, string oldState)
         {
