@@ -372,6 +372,9 @@ C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\Client
 C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\Client\obj\Debug\net6.0\win7-x64\PubTmp\Out\Microsoft.ServiceFabric.ReliableCollection.Interop.dll
 C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\Client\obj\Debug\net6.0\win7-x64\PubTmp\Out\Microsoft.ServiceFabric.Data.Interfaces.dll
 C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\Client\obj\Debug\net6.0\win7-x64\PubTmp\Out\Microsoft.ServiceFabric.Diagnostics.dll
+C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\Client\obj\Debug\net6.0\win7-x64\PubTmp\Out\Microsoft.ServiceFabric.FabricTransport.V2.dll
+C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\Client\obj\Debug\net6.0\win7-x64\PubTmp\Out\Microsoft.ServiceFabric.FabricTransport.dll
 C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\Client\obj\Debug\net6.0\win7-x64\PubTmp\Out\Microsoft.ServiceFabric.Services.dll
+C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\Client\obj\Debug\net6.0\win7-x64\PubTmp\Out\Microsoft.ServiceFabric.Services.Remoting.dll
 C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\Client\obj\Debug\net6.0\win7-x64\PubTmp\Out\Common.dll
 C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\Client\obj\Debug\net6.0\win7-x64\PubTmp\Out\Common.pdb

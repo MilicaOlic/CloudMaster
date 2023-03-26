@@ -248,3 +248,6 @@ C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\Publis
 C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\PublisherSubscriber\obj\Debug\net6.0\win7-x64\PublisherSubscriber.pdb
 C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\PublisherSubscriber\obj\Debug\net6.0\win7-x64\PublisherSubscriber.genruntimeconfig.cache
 C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\PublisherSubscriber\obj\Debug\net6.0\win7-x64\ref\PublisherSubscriber.dll
+C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\PublisherSubscriber\bin\Debug\net6.0\win7-x64\Microsoft.ServiceFabric.FabricTransport.V2.dll
+C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\PublisherSubscriber\bin\Debug\net6.0\win7-x64\Microsoft.ServiceFabric.FabricTransport.dll
+C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\PublisherSubscriber\bin\Debug\net6.0\win7-x64\Microsoft.ServiceFabric.Services.Remoting.dll

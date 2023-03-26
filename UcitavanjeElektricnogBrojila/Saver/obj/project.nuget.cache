@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "wU6P0W9LxgJ84yFa0nYUBfE9wYsFvFgZ1jSg0CLt20hmr8mRyJ9W/sa1M4StWbXXOSgBUqQ63emebJLN/yXxhw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Centar\\Documents\\GitHub\\CloudMaster\\UcitavanjeElektricnogBrojila\\Saver\\Saver.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Centar\\.nuget\\packages\\microsoft.servicefabric\\9.1.1583\\microsoft.servicefabric.9.1.1583.nupkg.sha512",
+    "C:\\Users\\Centar\\.nuget\\packages\\microsoft.servicefabric.data\\6.1.1583\\microsoft.servicefabric.data.6.1.1583.nupkg.sha512",
+    "C:\\Users\\Centar\\.nuget\\packages\\microsoft.servicefabric.data.extensions\\6.1.1583\\microsoft.servicefabric.data.extensions.6.1.1583.nupkg.sha512",
+    "C:\\Users\\Centar\\.nuget\\packages\\microsoft.servicefabric.data.interfaces\\6.1.1583\\microsoft.servicefabric.data.interfaces.6.1.1583.nupkg.sha512",
+    "C:\\Users\\Centar\\.nuget\\packages\\microsoft.servicefabric.diagnostics.internal\\6.1.1583\\microsoft.servicefabric.diagnostics.internal.6.1.1583.nupkg.sha512",
+    "C:\\Users\\Centar\\.nuget\\packages\\microsoft.servicefabric.fabrictransport.internal\\6.1.1583\\microsoft.servicefabric.fabrictransport.internal.6.1.1583.nupkg.sha512",
+    "C:\\Users\\Centar\\.nuget\\packages\\microsoft.servicefabric.services\\6.1.1583\\microsoft.servicefabric.services.6.1.1583.nupkg.sha512",
+    "C:\\Users\\Centar\\.nuget\\packages\\microsoft.servicefabric.services.remoting\\6.1.1583\\microsoft.servicefabric.services.remoting.6.1.1583.nupkg.sha512",
+    "C:\\Users\\Centar\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\Centar\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.0\\microsoft.aspnetcore.app.runtime.win-x64.6.0.0.nupkg.sha512",
+    "C:\\Users\\Centar\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.0\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.0.nupkg.sha512",
+    "C:\\Users\\Centar\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.0\\microsoft.netcore.app.runtime.win-x64.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

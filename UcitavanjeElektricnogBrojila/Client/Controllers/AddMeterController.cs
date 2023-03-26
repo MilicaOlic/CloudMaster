@@ -1,6 +1,10 @@
 ﻿using Common;
+using Common.Interfaces;
+using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.ServiceFabric.Services.Remoting.Client;
 using System.Diagnostics.Metrics;
+using System.Fabric;
 
 namespace Client.Controllers
 {
@@ -17,9 +21,48 @@ namespace Client.Controllers
 
         [HttpPost]
         [Route("/AddMeter/AddMeterMethod")]
-        public Task<IActionResult>AddMeter(MeterDevice meter) 
+        public async Task<IActionResult> AddMeter(MeterDevice meter)
         {
-            return Task.FromResult<IActionResult>(View("Index"));
+            if (meter.MeterId == 0 || meter.MeterState == "")
+            {
+                ViewData["Error"] = "Fields can not be empty!.";
+                return View("AddMeterView");
+            }
+            try
+            {
+                bool result = true;
+                FabricClient fabricClient = new System.Fabric.FabricClient();
+                int partitionsNumber = (await fabricClient.QueryManager.GetPartitionListAsync(new Uri("fabric:/UcitavanjeElektricnogBrojila/Saver"))).Count;
+                int index = 0;
+
+                for (int i = 0; i < partitionsNumber; i++)
+                {
+                    var proxy = ServiceProxy.Create<ISaver>(
+                    new Uri("fabric:/UcitavanjeElektricnogBrojila/Saver"),
+                    new Microsoft.ServiceFabric.Services.Client.ServicePartitionKey(index % partitionsNumber)
+                    );
+
+                    result = await proxy.AddMeter(meter);
+
+                    index++;
+                }
+
+                if (result)
+                {
+                    ViewData["Error"] = "Meter sucessfully added!";
+                }
+                else
+                {
+                    ViewData["Error"] = "Meter not added! Try again";
+                }
+
+                return View("AddMeterView");
+            }
+            catch
+            {
+                ViewData["Error"] = "Korisnik NIJE Dodat!";
+                return View("AddMeterView");
+            }
         }
     }
 }

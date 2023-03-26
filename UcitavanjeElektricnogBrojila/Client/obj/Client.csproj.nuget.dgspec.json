@@ -138,6 +138,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.ServiceFabric.Services.Remoting": {
+              "target": "Package",
+              "version": "[6.1.1583, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

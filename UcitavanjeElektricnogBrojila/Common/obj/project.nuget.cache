@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "k8GFBy4aV71KuqdcK+dN7ArJU5A3bYQepXD+qlwdbqnb518TxjlIDCTevUT3YR7WFQVZdwQVzhYyktiZDLUJWw==",
+  "dgSpecHash": "fUALnAVuRpWZZR++ZdCvSfRxJoHvbGEigeU99ftfgxwARix/ZDC4To9T1ZSMZVlnwilhAS8heMtfCiDzSLtICg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Centar\\Documents\\GitHub\\CloudMaster\\UcitavanjeElektricnogBrojila\\Common\\Common.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Centar\\.nuget\\packages\\microsoft.servicefabric\\9.1.1583\\microsoft.servicefabric.9.1.1583.nupkg.sha512",
+    "C:\\Users\\Centar\\.nuget\\packages\\microsoft.servicefabric.data\\6.1.1583\\microsoft.servicefabric.data.6.1.1583.nupkg.sha512",
+    "C:\\Users\\Centar\\.nuget\\packages\\microsoft.servicefabric.data.extensions\\6.1.1583\\microsoft.servicefabric.data.extensions.6.1.1583.nupkg.sha512",
+    "C:\\Users\\Centar\\.nuget\\packages\\microsoft.servicefabric.data.interfaces\\6.1.1583\\microsoft.servicefabric.data.interfaces.6.1.1583.nupkg.sha512",
+    "C:\\Users\\Centar\\.nuget\\packages\\microsoft.servicefabric.diagnostics.internal\\6.1.1583\\microsoft.servicefabric.diagnostics.internal.6.1.1583.nupkg.sha512",
+    "C:\\Users\\Centar\\.nuget\\packages\\microsoft.servicefabric.fabrictransport.internal\\6.1.1583\\microsoft.servicefabric.fabrictransport.internal.6.1.1583.nupkg.sha512",
+    "C:\\Users\\Centar\\.nuget\\packages\\microsoft.servicefabric.services\\6.1.1583\\microsoft.servicefabric.services.6.1.1583.nupkg.sha512",
+    "C:\\Users\\Centar\\.nuget\\packages\\microsoft.servicefabric.services.remoting\\6.1.1583\\microsoft.servicefabric.services.remoting.6.1.1583.nupkg.sha512",
+    "C:\\Users\\Centar\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
   "logs": []
 }

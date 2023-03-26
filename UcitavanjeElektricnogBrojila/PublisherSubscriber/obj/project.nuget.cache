@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "EkIgRWbCqG+aFtptYhQZ+i+nXg2aEKiuWMsPil4aiKz1dtNsyaztvVZWTR0mg8mvzHucQNqLumPZ4HrPS6qlHQ==",
+  "dgSpecHash": "OnrDErULqn17NtCU+l29NpYb8Un0uo8ETGvXjD/ErD3cNrtxpa2v7qwE8rixZczztzoy0eeJv5PcZCuNlAXR2A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Centar\\Documents\\GitHub\\CloudMaster\\UcitavanjeElektricnogBrojila\\PublisherSubscriber\\PublisherSubscriber.csproj",
   "expectedPackageFiles": [
@@ -9,7 +9,9 @@
     "C:\\Users\\Centar\\.nuget\\packages\\microsoft.servicefabric.data.extensions\\6.1.1583\\microsoft.servicefabric.data.extensions.6.1.1583.nupkg.sha512",
     "C:\\Users\\Centar\\.nuget\\packages\\microsoft.servicefabric.data.interfaces\\6.1.1583\\microsoft.servicefabric.data.interfaces.6.1.1583.nupkg.sha512",
     "C:\\Users\\Centar\\.nuget\\packages\\microsoft.servicefabric.diagnostics.internal\\6.1.1583\\microsoft.servicefabric.diagnostics.internal.6.1.1583.nupkg.sha512",
+    "C:\\Users\\Centar\\.nuget\\packages\\microsoft.servicefabric.fabrictransport.internal\\6.1.1583\\microsoft.servicefabric.fabrictransport.internal.6.1.1583.nupkg.sha512",
     "C:\\Users\\Centar\\.nuget\\packages\\microsoft.servicefabric.services\\6.1.1583\\microsoft.servicefabric.services.6.1.1583.nupkg.sha512",
+    "C:\\Users\\Centar\\.nuget\\packages\\microsoft.servicefabric.services.remoting\\6.1.1583\\microsoft.servicefabric.services.remoting.6.1.1583.nupkg.sha512",
     "C:\\Users\\Centar\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\Centar\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.0\\microsoft.aspnetcore.app.runtime.win-x64.6.0.0.nupkg.sha512",
     "C:\\Users\\Centar\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.0\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.0.nupkg.sha512",

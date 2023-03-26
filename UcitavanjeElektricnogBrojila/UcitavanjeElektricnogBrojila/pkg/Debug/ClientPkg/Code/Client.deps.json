@@ -1493,6 +1493,21 @@
           }
         }
       },
+      "Microsoft.ServiceFabric.FabricTransport.Internal/6.1.1583": {
+        "dependencies": {
+          "Microsoft.ServiceFabric": "9.1.1583"
+        },
+        "runtime": {
+          "runtimes/win/lib/netstandard2.0/Microsoft.ServiceFabric.FabricTransport.V2.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          },
+          "runtimes/win/lib/netstandard2.0/Microsoft.ServiceFabric.FabricTransport.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
+        }
+      },
       "Microsoft.ServiceFabric.Services/6.1.1583": {
         "dependencies": {
           "Microsoft.ServiceFabric.Data": "6.1.1583",
@@ -1505,8 +1520,24 @@
           }
         }
       },
+      "Microsoft.ServiceFabric.Services.Remoting/6.1.1583": {
+        "dependencies": {
+          "Microsoft.ServiceFabric.Diagnostics.Internal": "6.1.1583",
+          "Microsoft.ServiceFabric.FabricTransport.Internal": "6.1.1583",
+          "Microsoft.ServiceFabric.Services": "6.1.1583"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.ServiceFabric.Services.Remoting.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.1.6.0"
+          }
+        }
+      },
       "System.Memory/4.5.3": {},
       "Common/1.0.0": {
+        "dependencies": {
+          "Microsoft.ServiceFabric.Services.Remoting": "6.1.1583"
+        },
         "runtime": {
           "Common.dll": {}
         }
@@ -1578,12 +1609,26 @@
       "path": "microsoft.servicefabric.diagnostics.internal/6.1.1583",
       "hashPath": "microsoft.servicefabric.diagnostics.internal.6.1.1583.nupkg.sha512"
     },
+    "Microsoft.ServiceFabric.FabricTransport.Internal/6.1.1583": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CccBNLyOeYzXKMgk3a6F2HLBi5Eb0PiAtlNG8CyDIfL/i8OR7OxPPUZ1XoDXyBeXkCnGvvof8Qj0T0hhgYzP/Q==",
+      "path": "microsoft.servicefabric.fabrictransport.internal/6.1.1583",
+      "hashPath": "microsoft.servicefabric.fabrictransport.internal.6.1.1583.nupkg.sha512"
+    },
     "Microsoft.ServiceFabric.Services/6.1.1583": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-33y5X3hOC42T4xS4MR9d68oO8/5YahE5861uVllbAVD2qb3LSY9n1mYR4NgMHXNyd/Es1lRZbSpH0UVf+SL8Ow==",
       "path": "microsoft.servicefabric.services/6.1.1583",
       "hashPath": "microsoft.servicefabric.services.6.1.1583.nupkg.sha512"
+    },
+    "Microsoft.ServiceFabric.Services.Remoting/6.1.1583": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WkDFJkjd5QGxUArvBVZe6w4coEdveQ7piORaAHXkPMfv5lE9MmsM2WRbu/RpIuQxIjLTkPHmzGcL3kWfCqQQqQ==",
+      "path": "microsoft.servicefabric.services.remoting/6.1.1583",
+      "hashPath": "microsoft.servicefabric.services.remoting.6.1.1583.nupkg.sha512"
     },
     "System.Memory/4.5.3": {
       "type": "package",

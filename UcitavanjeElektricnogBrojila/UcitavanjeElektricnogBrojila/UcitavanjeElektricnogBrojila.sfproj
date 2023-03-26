@@ -40,6 +40,7 @@
       <ServiceLaunchUrl>http://localhost:{ServicePort}/</ServiceLaunchUrl>
     </ProjectReference>
     <ProjectReference Include="..\PublisherSubscriber\PublisherSubscriber.csproj" />
+    <ProjectReference Include="..\Saver\Saver.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
   <PropertyGroup>
