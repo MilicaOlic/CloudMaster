@@ -1,0 +1,32 @@
+﻿<style>
+    body {
+        background-image: url("https://thumbs.dreamstime.com/b/electric-meter-electric-pole-background-sunset-outdoor-waterproof-single-phase-inductive-kilowatt-hour-meter-installed-104574633.jpg");
+        background-size: auto;
+    }
+</style>
+<form action="~/AddMeterState/AddMeterStateMethod" method="post">
+    <div class="grid-container" style="width: 50%">
+        <div class="grid-item" style="grid-column:1; grid-row:1">
+            State ID:
+            <input type="number" name="StateId" />
+        </div>
+        <div class="grid-item" style="grid-column:1; grid-row:1">
+            Meter ID:
+            <input type="number" name="MeterId" />
+        </div> <div class="grid-item" style="grid-column:1; grid-row:1">
+            City:
+            <input type="text" name="City" />
+        </div>
+        <div class="grid-item" style="grid-column:1; grid-row:2">
+            Old Meter state:
+            <input type="text" name="OldState" />
+        </div>
+        <div class="grid-item" style="grid-column:1; grid-row:2">
+            New Meter state:
+            <input type="text" name="NewState" />
+        </div>
+        <div class="grid-item" background-color:white">
+            <input type="submit" class="submit" value="Submit" />
+        </div>
+    </div>
+</form>

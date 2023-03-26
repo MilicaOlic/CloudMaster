@@ -10,7 +10,7 @@ namespace Common
 {
     public class MeterDevice
     {
-        public MeterDevice(string meterId, string meterState)
+        public MeterDevice(int meterId, string meterState)
         {
             MeterId = meterId;
             MeterState = meterState;
@@ -20,7 +20,7 @@ namespace Common
 
         [Key]
         [DataMember]
-        public string MeterId { get; set; }
+        public int MeterId { get; set; }
         [DataMember]
         public string MeterState { get; set; }
 

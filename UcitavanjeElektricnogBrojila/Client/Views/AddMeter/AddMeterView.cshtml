@@ -1,15 +1,20 @@
-﻿
+﻿<style>
+    body {
+        background-image: url("https://thumbs.dreamstime.com/b/electric-meter-electric-pole-background-sunset-outdoor-waterproof-single-phase-inductive-kilowatt-hour-meter-installed-104574633.jpg");
+        background-size: auto;
+    }
+</style>
 <form action="~/AddMeter/AddMeterMethod" method="post">
     <div class="grid-container" style="width: 50%">
         <div class="grid-item" style="grid-column:1; grid-row:1">
             Meter ID:
-            <input type="text" name="MeterId" />
+            <input type="number" name="MeterId" />
         </div>
         <div class="grid-item" style="grid-column:1; grid-row:2">
             Meter state:
             <input type="text" name="MeterState" />
         </div>
-        <div class="grid-item" style="grid-column:1; grid-row:3; background-color:white">
+        <div class="grid-item" background-color:white">
             <input type="submit" class="submit" value="Submit" />
         </div>
     </div>
