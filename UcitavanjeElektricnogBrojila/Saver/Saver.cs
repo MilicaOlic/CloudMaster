@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Fabric;
+using System.Fabric.Query;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -16,17 +18,19 @@ namespace Saver
     /// <summary>
     /// An instance of this class is created for each service replica by the Service Fabric runtime.
     /// </summary>
-    internal sealed class Saver : StatefulService, ISaver
+    internal sealed class Saver : Microsoft.ServiceFabric.Services.Runtime.StatefulService, ISaver
     {
         IReliableDictionary<int, MeterDevice> meterDictionary;
+        IReliableDictionary<int, MeterState> meterStateDictionary;
         public Saver(StatefulServiceContext context)
             : base(context)
         { }
 
         public async Task<bool> AddMeter(MeterDevice device)
         {
-            var stateManager = this.StateManager;
+            var stateManager = this.StateManager; 
             bool result = true;
+  
 
             meterDictionary = await stateManager.GetOrAddAsync<IReliableDictionary<int, MeterDevice>>("MeterActiveData");
             using (var tx = stateManager.CreateTransaction())
@@ -39,10 +43,43 @@ namespace Saver
             {
                 return false;
             }
-            List<MeterDevice> devices = await MeterGetAllData();
             return true;
         }
-        public async Task<List<MeterDevice>> MeterGetAllData()
+        public async Task<bool> AddMeterState(MeterState state)
+        {
+            var stateManager = this.StateManager;
+            bool result = true;
+            bool resultDevice = false;
+
+            meterStateDictionary = await stateManager.GetOrAddAsync<IReliableDictionary<int, MeterState>>("MeterStateActiveData");
+
+            resultDevice = await MeterDeviceExistWithOldState(state.MeterId, state.OldState); //da bih dodala novo stanje mora biti isto staro stanje i meterId
+
+            if (resultDevice) {
+                using (var tx = stateManager.CreateTransaction())
+                {
+                    result = await meterStateDictionary.TryAddAsync(tx, state.StateId, state);
+                    await tx.CommitAsync();
+                }
+                if (result == false)
+                {
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public async Task<bool> MeterDeviceExistWithOldState(int deviceId, string oldState)
+        {
+            List<MeterDevice> meterdevices = await MeterDeviceGetAllData();
+            return meterdevices.Exists(x => x.MeterId == deviceId && x.MeterState == oldState);
+        }
+        public async Task<List<MeterDevice>> MeterDeviceGetAllData()
         {
             var stateManager = this.StateManager;
 

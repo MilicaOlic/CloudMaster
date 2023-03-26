@@ -10,5 +10,8 @@ namespace Common.Interfaces
     public interface ISaver:IService
     {
         Task<bool> AddMeter(MeterDevice device);
+        Task<bool> AddMeterState(MeterState state);
+
+
     }
 }
