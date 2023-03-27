@@ -10,6 +10,7 @@ using Common;
 using Common.Interfaces;
 using Microsoft.ServiceFabric.Data.Collections;
 using Microsoft.ServiceFabric.Services.Communication.Runtime;
+using Microsoft.ServiceFabric.Services.Remoting.Client;
 using Microsoft.ServiceFabric.Services.Remoting.Runtime;
 using Microsoft.ServiceFabric.Services.Runtime;
 
@@ -57,16 +58,10 @@ namespace Saver
 
             if (resultDevice) {
                 using (var tx = stateManager.CreateTransaction())
-                { 
+                {
                     result = await meterStateDictionary.TryAddAsync(tx, state.StateId, state);
                     await tx.CommitAsync();
                     UpdateMeterDevice(new MeterDevice(state.MeterId, state.NewState));
-                }
-                if (result == false)
-                {
-                    return false;
-                }
-                else {
                     return true;
                 }
             }

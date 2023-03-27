@@ -60,7 +60,7 @@ namespace Client.Controllers
             }
             catch
             {
-                ViewData["Error"] = "Korisnik NIJE Dodat!";
+                ViewData["Error"] = "Meter not added! Try again";
                 return View("AddMeterView");
             }
         }

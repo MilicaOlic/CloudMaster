@@ -9,6 +9,7 @@
     ".NETCoreApp,Version=v6.0/win7-x64": {
       "PublisherSubscriber/1.0.0": {
         "dependencies": {
+          "Common": "1.0.0",
           "Microsoft.ServiceFabric.Services": "6.1.1583",
           "Microsoft.ServiceFabric.Services.Remoting": "6.1.1583",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "6.0.0"
@@ -977,7 +978,15 @@
           }
         }
       },
-      "System.Memory/4.5.3": {}
+      "System.Memory/4.5.3": {},
+      "Common/1.0.0": {
+        "dependencies": {
+          "Microsoft.ServiceFabric.Services.Remoting": "6.1.1583"
+        },
+        "runtime": {
+          "Common.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -1053,6 +1062,11 @@
       "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
       "path": "system.memory/4.5.3",
       "hashPath": "system.memory.4.5.3.nupkg.sha512"
+    },
+    "Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   },
   "runtimes": {

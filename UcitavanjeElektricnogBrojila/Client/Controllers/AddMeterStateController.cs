@@ -54,12 +54,11 @@ namespace Client.Controllers
                 {
                     ViewData["Error"] = "MeterState not added! Try again";
                 }
-                ViewData["Error"] = "";
                 return View("AddMeterStateView");
             }
             catch
             {
-                ViewData["Error"] = "Korisnik NIJE Dodat!";
+                ViewData["Error"] = "MeterState not added!";
                 return View("AddMeterStateView");
             }
         }

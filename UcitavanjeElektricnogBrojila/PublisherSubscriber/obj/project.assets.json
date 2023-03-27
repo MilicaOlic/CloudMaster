@@ -292,6 +292,19 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.ServiceFabric.Services.Remoting": "6.1.1583"
+        },
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
+        }
       }
     },
     "net6.0/win7-x64": {
@@ -428,6 +441,19 @@
         },
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
+        }
+      },
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.ServiceFabric.Services.Remoting": "6.1.1583"
+        },
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
         }
       }
     }
@@ -907,10 +933,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Common.csproj",
+      "msbuildProject": "../Common/Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Common >= 1.0.0",
       "Microsoft.ServiceFabric.Services >= 6.1.1583",
       "Microsoft.ServiceFabric.Services.Remoting >= 6.1.1583"
     ]
@@ -948,7 +980,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Centar\\Documents\\GitHub\\CloudMaster\\UcitavanjeElektricnogBrojila\\Common\\Common.csproj": {
+              "projectPath": "C:\\Users\\Centar\\Documents\\GitHub\\CloudMaster\\UcitavanjeElektricnogBrojila\\Common\\Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,11 +1,15 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Fabric;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Common;
+using Common.Interfaces;
 using Microsoft.ServiceFabric.Data.Collections;
 using Microsoft.ServiceFabric.Services.Communication.Runtime;
+using Microsoft.ServiceFabric.Services.Remoting.Client;
 using Microsoft.ServiceFabric.Services.Runtime;
 
 namespace PublisherSubscriber
@@ -13,11 +17,41 @@ namespace PublisherSubscriber
     /// <summary>
     /// An instance of this class is created for each service replica by the Service Fabric runtime.
     /// </summary>
-    internal sealed class PublisherSubscriber : StatefulService
+    internal sealed class PublisherSubscriber : StatefulService, IPubSub
     {
         public PublisherSubscriber(StatefulServiceContext context)
             : base(context)
         { }
+
+        public async Task<bool> StateAdded(MeterState state)
+        {
+            bool result = true;
+            FabricClient fabricClient = new System.Fabric.FabricClient();
+            int partitionsNumber = (await fabricClient.QueryManager.GetPartitionListAsync(new Uri("fabric:/UcitavanjeElektricnogBrojila/Client"))).Count;
+            int index = 0;
+
+            for (int i = 0; i < partitionsNumber; i++)
+            {
+                var proxy = ServiceProxy.Create<IPubSub>(
+                new Uri("fabric:/UcitavanjeElektricnogBrojila/Client"),
+                new Microsoft.ServiceFabric.Services.Client.ServicePartitionKey(index % partitionsNumber)
+                );
+
+                result = await proxy.StateAdded(state);
+
+                index++;
+
+                if (result)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
 
         /// <summary>
         /// Optional override to create listeners (e.g., HTTP, Service Remoting, WCF, etc.) for this service replica to handle client or user requests.
