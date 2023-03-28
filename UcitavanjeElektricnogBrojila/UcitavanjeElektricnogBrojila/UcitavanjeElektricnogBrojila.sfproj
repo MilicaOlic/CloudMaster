@@ -39,6 +39,7 @@
     <ProjectReference Include="..\Client\Client.csproj">
       <ServiceLaunchUrl>http://localhost:{ServicePort}/</ServiceLaunchUrl>
     </ProjectReference>
+    <ProjectReference Include="..\MailReceiver\MailReceiver.csproj" />
     <ProjectReference Include="..\PublisherSubscriber\PublisherSubscriber.csproj" />
     <ProjectReference Include="..\Saver\Saver.csproj" />
   </ItemGroup>

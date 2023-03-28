@@ -81,7 +81,7 @@ namespace Client.Controllers
                 new Microsoft.ServiceFabric.Services.Client.ServicePartitionKey(index % partitionsNumber)
                 );
 
-                devices = await proxy.MeterDeviceGetAllData();
+                devices.AddRange(await proxy.MeterDeviceGetAllData());
 
                 index++;
             }
