@@ -12,5 +12,6 @@ namespace Common.Interfaces
         Task<bool> AddMeter(MeterDevice device);
         Task<bool> AddMeterState(MeterState state);
         Task<List<MeterDevice>> MeterDeviceGetAllData();
+        Task<List<MeterState>> GetMeterStates();
     }
 }

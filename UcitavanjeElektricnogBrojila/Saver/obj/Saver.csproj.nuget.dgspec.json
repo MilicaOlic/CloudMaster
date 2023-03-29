@@ -49,6 +49,10 @@
             "Microsoft.ServiceFabric.Services.Remoting": {
               "target": "Package",
               "version": "[6.1.1583, )"
+            },
+            "WindowsAzure.Storage": {
+              "target": "Package",
+              "version": "[9.3.3, )"
             }
           },
           "imports": [
@@ -120,6 +124,10 @@
             "Microsoft.ServiceFabric.Services": {
               "target": "Package",
               "version": "[6.1.1583, )"
+            },
+            "WindowsAzure.Storage": {
+              "target": "Package",
+              "version": "[9.3.3, )"
             }
           },
           "imports": [

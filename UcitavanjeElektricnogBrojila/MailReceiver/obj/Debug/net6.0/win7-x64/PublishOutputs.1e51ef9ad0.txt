@@ -241,7 +241,10 @@ C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\Ucitav
 C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\UcitavanjeElektricnogBrojila\pkg\Debug\MailReceiverPkg\Code\Microsoft.ServiceFabric.Services.dll
 C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\UcitavanjeElektricnogBrojila\pkg\Debug\MailReceiverPkg\Code\Microsoft.ServiceFabric.Services.Remoting.dll
 C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\UcitavanjeElektricnogBrojila\pkg\Debug\MailReceiverPkg\Code\Microsoft.Win32.SystemEvents.dll
+C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\UcitavanjeElektricnogBrojila\pkg\Debug\MailReceiverPkg\Code\Newtonsoft.Json.dll
 C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\UcitavanjeElektricnogBrojila\pkg\Debug\MailReceiverPkg\Code\Spire.Email.dll
 C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\UcitavanjeElektricnogBrojila\pkg\Debug\MailReceiverPkg\Code\System.Drawing.Common.dll
+C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\UcitavanjeElektricnogBrojila\pkg\Debug\MailReceiverPkg\Code\Microsoft.WindowsAzure.Storage.dll
+C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\UcitavanjeElektricnogBrojila\pkg\Debug\MailReceiverPkg\Code\clrcompression.dll
 C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\UcitavanjeElektricnogBrojila\pkg\Debug\MailReceiverPkg\Code\Common.dll
 C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\UcitavanjeElektricnogBrojila\pkg\Debug\MailReceiverPkg\Code\Common.pdb

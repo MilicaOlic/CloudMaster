@@ -52,7 +52,7 @@ namespace Client.Controllers
                 }
                 else
                 {
-                    ViewData["Error"] = "MeterState not added! Try again";
+                    //ViewData["Error"] = "MeterState not added! Try again";
                 }
                 return View("AddMeterStateView");
             }
@@ -61,6 +61,32 @@ namespace Client.Controllers
                 ViewData["Error"] = "MeterState not added!";
                 return View("AddMeterStateView");
             }
+        }
+        [HttpGet]
+        [Route("/AddMeterState/GetHistoricalTable")]
+        public async Task<IActionResult> GetHistoricalTable(MeterState state)
+        {
+            List<MeterState> states = new List<MeterState>();
+
+            bool result = true;
+            FabricClient fabricClient = new System.Fabric.FabricClient();
+            int partitionsNumber = (await fabricClient.QueryManager.GetPartitionListAsync(new Uri("fabric:/UcitavanjeElektricnogBrojila/Saver"))).Count;
+            int index = 0;
+
+            for (int i = 0; i < partitionsNumber; i++)
+            {
+                var proxy = ServiceProxy.Create<ISaver>(
+                new Uri("fabric:/UcitavanjeElektricnogBrojila/Saver"),
+                new Microsoft.ServiceFabric.Services.Client.ServicePartitionKey(index % partitionsNumber)
+                );
+
+                states = await proxy.GetMeterStates();
+
+                index++;
+            }
+
+            ViewBag.States = states;
+            return View("HistoricalTableView");
         }
     }
 }

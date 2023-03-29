@@ -376,5 +376,8 @@ C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\Client
 C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\Client\obj\Debug\net6.0\win7-x64\PubTmp\Out\Microsoft.ServiceFabric.FabricTransport.dll
 C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\Client\obj\Debug\net6.0\win7-x64\PubTmp\Out\Microsoft.ServiceFabric.Services.dll
 C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\Client\obj\Debug\net6.0\win7-x64\PubTmp\Out\Microsoft.ServiceFabric.Services.Remoting.dll
+C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\Client\obj\Debug\net6.0\win7-x64\PubTmp\Out\Newtonsoft.Json.dll
+C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\Client\obj\Debug\net6.0\win7-x64\PubTmp\Out\Microsoft.WindowsAzure.Storage.dll
+C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\Client\obj\Debug\net6.0\win7-x64\PubTmp\Out\clrcompression.dll
 C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\Client\obj\Debug\net6.0\win7-x64\PubTmp\Out\Common.dll
 C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\Client\obj\Debug\net6.0\win7-x64\PubTmp\Out\Common.pdb

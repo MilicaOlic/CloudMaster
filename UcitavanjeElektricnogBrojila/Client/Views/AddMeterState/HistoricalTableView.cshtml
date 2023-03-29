@@ -1,0 +1,161 @@
+﻿
+<style>
+    body {
+        background-image: url("https://thumbs.dreamstime.com/b/electric-meter-electric-pole-background-sunset-outdoor-waterproof-single-phase-inductive-kilowatt-hour-meter-installed-104574633.jpg");
+        background-size: auto;
+    }
+
+    table {
+        background-color: snow;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: solid;
+        width: 50%;
+    }
+
+    h1 {
+        font-family: 'Maiandra GD';
+        color: snow;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 50px;
+    }
+
+    td {
+        font-family: 'Maiandra GD';
+        font-size: 24px;
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid #dddddd;
+        padding: 8px;
+    }
+
+    tr {
+        background-color: # #dddddd;
+    }
+
+    h3 {
+        font-family: 'Maiandra GD';
+        font-size: 30px;
+        text-align: center;
+        vertical-align: middle;
+        color: #ff1a1a;
+    }
+
+    input {
+        height: 30px;
+        text-align: center;
+        vertical-align: middle;
+        font-family: 'Times New Roman';
+        font-size: medium;
+    }
+
+        input.check {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    a {
+        color: #1cc49d;
+    }
+
+        a.option {
+            font-size: 140%;
+            padding: 3px;
+            background-color: black;
+            margin: 4px;
+        }
+
+    input[type=radio] {
+        border: 0px;
+        width: 15%;
+        height: 2em;
+    }
+
+    input.submit {
+        color: #1cc49d;
+        background-color: #1b2f31;
+        border-radius: 50px;
+        justify-content: center;
+        align-items: center;
+        height: 3em;
+        width: 8em;
+        font-size: large;
+        font-weight: 600;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    div.grid-container {
+        background-color: snow;
+        display: grid;
+        padding: 10px;
+        border-style: solid;
+        margin: 10px;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    div.grid-item {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 30px;
+        text-align: center;
+        display: inline-grid;
+        border-style: solid;
+        margin: 1px;
+    }
+
+    div.grid-item1 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 30px;
+        text-align: center;
+        display: inline-grid;
+        background-color: burlywood;
+        border-style: solid;
+        margin: 1px;
+    }
+</style>
+@using Common;
+
+<div class="grid-container">
+    @{
+        <div class="grid-item1" style="grid-column:1; grid-row:1">
+            State ID
+        </div>
+        <div class="grid-item1" style="grid-column:2; grid-row:1">
+            Meter ID
+        </div>
+        <div class="grid-item1" style="grid-column:3; grid-row:1">
+            City
+        </div>
+        <div class="grid-item1" style="grid-column:4; grid-row:1">
+            Old state
+        </div>
+        <div class="grid-item1" style="grid-column:5; grid-row:1">
+            New state
+        </div>
+        int r = 2;
+
+        foreach (var displayitem in ViewBag.States)
+        {
+            <div class="grid-item" style="grid-column:1; grid-row:@r">
+                @displayitem.StateId
+            </div>
+            <div class="grid-item" style="grid-column:2; grid-row:@r">
+                @displayitem.MeterId
+            </div>
+            <div class="grid-item" style="grid-column:3; grid-row:@r">
+                @displayitem.City
+            </div>
+            <div class="grid-item" style="grid-column:4; grid-row:@r">
+                @displayitem.OldState
+            </div>
+            <div class="grid-item" style="grid-column:5; grid-row:@r">
+                @displayitem.NewState
+            </div>
+            r++;
+        }
+    }
+</div>

@@ -13,6 +13,8 @@ using Microsoft.ServiceFabric.Services.Communication.Runtime;
 using Microsoft.ServiceFabric.Services.Remoting.Client;
 using Microsoft.ServiceFabric.Services.Remoting.Runtime;
 using Microsoft.ServiceFabric.Services.Runtime;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Table;
 
 namespace Saver
 {
@@ -61,7 +63,8 @@ namespace Saver
                 {
                     result = await meterStateDictionary.TryAddAsync(tx, state.StateId, state);
                     await tx.CommitAsync();
-                    UpdateMeterDevice(new MeterDevice(state.MeterId, state.NewState));
+                    await UpdateMeterDevice(new MeterDevice(state.MeterId, state.NewState));
+                    await AddToTableStorage(state);
                     return true;
                 }
             }
@@ -103,6 +106,38 @@ namespace Saver
             }
 
             return meters;
+        }
+        private async Task AddToTableStorage(MeterState state)
+        {
+            try
+            {
+                CloudStorageAccount storageAccount = CloudStorageAccount.Parse("UseDevelopmentStorage=true");
+                CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
+                CloudTable table = tableClient.GetTableReference("MeterStates");
+                await table.CreateIfNotExistsAsync();
+
+                await table.ExecuteAsync(TableOperation.InsertOrReplace(new MeterStateTableStorage(state.StateId, state.MeterId, state.City, state.OldState, state.NewState)));
+            }
+            catch(Exception e)
+            {
+
+            }
+        }
+        public async Task<List<MeterState>> GetMeterStates()
+        {
+            TableQuery<MeterStateTableStorage> tableQuery = new TableQuery<MeterStateTableStorage>();
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse("UseDevelopmentStorage=true");
+            CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
+            CloudTable table = tableClient.GetTableReference("MeterStates");
+
+            List<MeterState> meterStates = new List<MeterState>();
+            foreach (MeterStateTableStorage entity in await table.ExecuteQuerySegmentedAsync(tableQuery, default))
+            {
+                var meterState = new MeterState(entity.StateId, entity.MeterId, entity.City, entity.OldState, entity.NewState);
+                meterStates.Add(meterState);
+            }
+
+            return meterStates;
         }
         /// <summary>
         /// Optional override to create listeners (e.g., HTTP, Service Remoting, WCF, etc.) for this service replica to handle client or user requests.

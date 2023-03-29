@@ -1,1 +1,2 @@
 C:\Users\Centar\Documents\GitHub\CloudMaster\UcitavanjeElektricnogBrojila\UcitavanjeElektricnogBrojila\obj\x64\Debug\UcitavanjeElektricnogBrojila.sfproj.CoreCompileInputs.cache
+C:\Users\Centar\Desktop\New folder\CloudMaster-main\UcitavanjeElektricnogBrojila\UcitavanjeElektricnogBrojila\obj\x64\Debug\UcitavanjeElektricnogBrojila.sfproj.CoreCompileInputs.cache
